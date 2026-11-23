@@ -1,0 +1,10 @@
+{
+  "name": "esse.kz — AI эссе көмекшің",
+  "short_name": "esse.kz",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f8ff",
+  "theme_color": "#082b78",
+  "description": "Эссе жазуға арналған көмекші",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+}
