@@ -10,53 +10,200 @@
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header class="topbar">
     <a class="brand" href="#" aria-label="esse.kz басты бет">
-      <span class="brand-icon">✒</span><span>esse<span class="dot">.</span>kz</span>
+      <span class="brand-icon">✒</span>
+      <span>esse<span class="dot">.</span>kz</span>
     </a>
-    <nav><a class="active" href="#home">Басты бет</a><a href="#how">Қалай жұмыс істейді?</a></nav>
+
+    <nav>
+      <a class="active" href="#home">Басты бет</a>
+      <a href="#how">Қалай жұмыс істейді?</a>
+    </nav>
+
     <button class="theme-btn" id="themeBtn" aria-label="Түсті ауыстыру">☾</button>
   </header>
 
   <main id="home">
+
     <section class="hero">
       <div class="hero-copy">
         <span class="eyebrow">✦ ОЙЫҢДЫ ӘДЕМІ ЖЕТКІЗ</span>
-        <h1>Әр ойдың әдемі<br><span>жазылған нұсқасы.</span></h1>
-        <p>Тақырыбыңды енгіз. Қажетті сөз санын таңда. Эссеңді дайындауға көмектесейік.</p>
-        <div class="trust-row"><span>✓ Қазақша</span><span>✓ Орысша</span><span>✓ English</span></div>
+
+        <h1>
+          Әр ойдың әдемі<br>
+          <span>жазылған нұсқасы.</span>
+        </h1>
+
+        <p>
+          Тақырыбыңды енгіз. Қажетті сөз санын таңда.
+          AI көмегімен эссеңді дайында.
+        </p>
+
+        <div class="trust-row">
+          <span>✓ Қазақша</span>
+          <span>✓ Орысша</span>
+          <span>✓ English</span>
+        </div>
       </div>
-      <div class="hero-art" aria-hidden="true"><div class="paper">✍️<i>esse.kz</i><b>Ой → Мәтін</b></div><div class="spark">✦</div></div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="paper">
+          ✍️
+          <i>esse.kz</i>
+          <b>Ой → Мәтін</b>
+        </div>
+        <div class="spark">✦</div>
+      </div>
     </section>
 
     <section class="workspace">
+
       <div class="form-card">
-        <div class="section-heading"><div><span class="eyebrow">ЖАҢА ЭССЕ</span><h2>Эссеңді бастайық</h2></div><span class="round-icon">✎</span></div>
-        <form id="essayForm">
-          <label for="topic">Эссе тақырыбы</label>
-          <textarea id="topic" rows="3" placeholder="Мысалы: Менің Отаным — Қазақстан" required></textarea>
-          <div class="field-grid">
-            <div><label for="count">Қажетті сөз саны</label><input id="count" type="number" min="50" max="3000" value="150" required></div>
-            <div><label for="language">Эссе тілі</label><select id="language"><option value="Қазақша">Қазақша</option><option value="Орысша">Орысша</option><option value="Ағылшынша">Ағылшынша</option></select></div>
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">ЖАҢА ЭССЕ</span>
+            <h2>Эссеңді бастайық</h2>
           </div>
+          <span class="round-icon">✎</span>
+        </div>
+
+        <form id="essayForm">
+
+          <label for="topic">Эссе тақырыбы</label>
+
+          <textarea
+            id="topic"
+            rows="3"
+            placeholder="Мысалы: Менің Отаным — Қазақстан"
+            required
+          ></textarea>
+
+          <div class="field-grid">
+
+            <div>
+              <label for="count">Қажетті сөз саны</label>
+              <input
+                id="count"
+                type="number"
+                min="50"
+                max="3000"
+                value="150"
+                required
+              >
+            </div>
+
+            <div>
+              <label for="language">Эссе тілі</label>
+              <select id="language">
+                <option value="Қазақша">Қазақша</option>
+                <option value="Орысша">Орысша</option>
+                <option value="Ағылшынша">Ағылшынша</option>
+              </select>
+            </div>
+
+          </div>
+
           <label for="style">Эссе стилі</label>
-          <select id="style"><option>Мектептік</option><option>Академиялық</option><option>Пікірталастық</option><option>Еркін стиль</option><option>Әдеби талдау</option></select>
-          <button class="primary-btn" type="submit"><span>✦</span> ЭССЕ ЖАЗУ <span>→</span></button>
-          <p class="small-note">Қазір бұл — бастапқы нұсқа. AI қызметін келесі кезеңде қауіпсіз сервер арқылы қосамыз.</p>
+
+          <select id="style">
+            <option>Мектептік</option>
+            <option>Академиялық</option>
+            <option>Пікірталастық</option>
+            <option>Еркін стиль</option>
+            <option>Әдеби талдау</option>
+          </select>
+
+          <button class="primary-btn" type="submit">
+            <span>✦</span>
+            ЭССЕ ЖАЗУ
+            <span>→</span>
+          </button>
+
+          <p class="small-note">
+            ✨ Тақырыбыңды енгізіп, AI көмегімен эссе дайында!
+          </p>
+
         </form>
       </div>
+
       <aside class="side-card">
-        <span class="side-icon">✦</span><h3>Неге esse.kz?</h3>
-        <ul><li><b>01</b><span>Қажетті сөз санын тексеру</span></li><li><b>02</b><span>Бірнеше тілде жазуға дайын</span></li><li><b>03</b><span>Түсінікті әрі ыңғайлы интерфейс</span></li><li><b>04</b><span>Мәтінді көшіріп алу</span></li></ul>
-        <div class="tip">💡 Кеңес: тақырыпты нақты жазсаң, эссе де мазмұнды болады.</div>
+        <span class="side-icon">✦</span>
+
+        <h3>Неге esse.kz?</h3>
+
+        <ul>
+          <li>
+            <b>01</b>
+            <span>Қажетті сөз санын таңдау</span>
+          </li>
+
+          <li>
+            <b>02</b>
+            <span>Бірнеше тілде жазу</span>
+          </li>
+
+          <li>
+            <b>03</b>
+            <span>Ыңғайлы әрі түсінікті интерфейс</span>
+          </li>
+
+          <li>
+            <b>04</b>
+            <span>Мәтінді көшіріп алу</span>
+          </li>
+        </ul>
+
+        <div class="tip">
+          💡 Кеңес: тақырыпты нақты жазсаң, эссе де мазмұнды болады.
+        </div>
       </aside>
+
     </section>
 
-    <section class="how" id="how"><span class="eyebrow">ҮШ ҚАДАМ</span><h2>Қолдану өте оңай</h2><div class="steps"><article><b>1</b><h3>Тақырыпты енгіз</h3><p>Эссең не туралы екенін жаз.</p></article><article><b>2</b><h3>Параметрлерді таңда</h3><p>Сөз саны, тіл және стильді белгіле.</p></article><article><b>3</b><h3>Эссеңді ал</h3><p>AI қосылғаннан кейін дайын мәтінді осы жерден аласың.</p></article></div></section>
+    <section class="how" id="how">
+      <span class="eyebrow">ҮШ ҚАДАМ</span>
+
+      <h2>Қолдану өте оңай</h2>
+
+      <div class="steps">
+
+        <article>
+          <b>1</b>
+          <h3>Тақырыпты енгіз</h3>
+          <p>Эссең не туралы екенін жаз.</p>
+        </article>
+
+        <article>
+          <b>2</b>
+          <h3>Параметрлерді таңда</h3>
+          <p>Сөз саны, тіл және стильді белгіле.</p>
+        </article>
+
+        <article>
+          <b>3</b>
+          <h3>Эссеңді ал</h3>
+          <p>Дайын мәтінді оқып, көшіріп ал.</p>
+        </article>
+
+      </div>
+    </section>
+
   </main>
-  <footer><a class="brand" href="#"><span class="brand-icon">✒</span><span>esse<span class="dot">.</span>kz</span></a><p>© 2026 esse.kz · Эссе жазуға арналған көмекші</p></footer>
+
+  <footer>
+    <a class="brand" href="#">
+      <span class="brand-icon">✒</span>
+      <span>esse<span class="dot">.</span>kz</span>
+    </a>
+
+    <p>© 2026 esse.kz · Эссе жазуға арналған көмекші</p>
+  </footer>
+
   <div class="toast" id="toast" role="status"></div>
+
   <script src="app.js"></script>
 </body>
 </html>
