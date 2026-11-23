@@ -4,6 +4,12 @@ export default async function handler(req, res) {
   }
 
   try {
+    const apiKey = String(process.env.GEMINI_API_KEY || "").trim();
+
+    if (!apiKey) {
+      return res.status(500).json({ error: "API кілті табылмады." });
+    }
+
     const { topic, language, wordCount, style } = req.body || {};
 
     if (!topic || typeof topic !== "string" || !topic.trim()) {
@@ -17,14 +23,13 @@ export default async function handler(req, res) {
     }
 
     const prompt = `
-Эссе жазуға көмектес.
+Қазақ тілінде сауатты эссе жаз.
 Тақырып: ${topic}
 Тілі: ${language || "Қазақша"}
 Сөз саны: шамамен ${count}
 Стилі: ${style || "Мектептік"}
 
 Кіріспе, негізгі бөлім және қорытынды болсын.
-Мәтін түсінікті әрі сауатты болсын.
 `;
 
     const response = await fetch(
@@ -33,7 +38,7 @@ export default async function handler(req, res) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-goog-api-key": process.env.GEMINI_API_KEY
+          "x-goog-api-key": apiKey
         },
         body: JSON.stringify({
           contents: [{ parts: [{ text: prompt }] }]
@@ -61,7 +66,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ essay });
 
   } catch (error) {
-    console.error(error);
+    console.error("Server error:", error);
     return res.status(500).json({ error: "Сервер қатесі." });
   }
 }
